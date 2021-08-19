@@ -1,0 +1,197 @@
+/* 
+  @author Suhana 
+  Project name == Sumukha's Portfolio
+  
+  Cleaning code == Done
+  Organizing code == Done
+  Property and value arrangement == Done
+
+*/
+
+/* Color Pallete: #364F6B, #3FC1C9, #F5F5F5, #FC5185 */
+
+  *,*:before,*:after {
+    box-sizing:inherit;
+    border:0 none; 
+    margin:0; 
+    padding:0; 
+    position: relative;
+  }
+
+  html {
+    color: #000;
+    background: #000;
+    box-sizing:border-box;
+    font-family: 'Vollkorn', sans-serif;
+    font-size: 1rem;
+  }
+
+  body > article {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  figure {
+    background: #eee;
+    box-shadow: 4px -4px 8px rgba(0,0,0,.4);
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto 10vh 0;
+    position: sticky;
+    top: 0;
+    width: calc( 50% + 1px);
+  }
+
+  figure:nth-of-type(2n)::after {
+    left: 5vmin;
+    right: 45%;
+  }
+
+  section {
+    box-shadow: -4px -4px 8px rgba(0,0,0,.4);
+    height: 100vh;
+    margin: 0 0 10vh auto;
+    padding: 5vmin;
+    position: sticky;
+    top: 0;
+    width: calc(50% + 1px);
+  }
+
+  figure:nth-of-type(1),
+  section:nth-of-type(1) {
+    margin: 0 0 10vh 0;
+    width: 50%;
+  }
+
+  figure:nth-of-type(2n) {
+    box-shadow: -4px -4px 8px rgba(0,0,0,.4);
+    margin: 0 0 10vh auto;
+  }
+
+  section:nth-of-type(2n) {
+    box-shadow: 4px -4px 8px rgba(0,0,0,.4);
+    margin: 0 auto 10vh 0;
+  }
+
+  figure:last-of-type,
+  section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  section::before {
+    background: inherit;
+    border-radius: 1.5vmin 0 0 0;
+    box-shadow: -4px -2px 8px rgba(0,0,0,.4);
+    content: '';
+    clip-path: polygon(-15% -15%, 110% 0%, 0% 110%);
+    height: 7vmin;
+    left:0;
+    position: absolute;
+    top: 50%;
+    transform: translate(calc(-50% + 1px), -50%) rotate(-45deg);
+    width: 7vmin;
+    z-index: 1;
+  }
+
+  section:nth-of-type(2n)::before {
+    left:auto;
+    right: 0;
+    transform: translate(calc(50% - 1px), -50%) rotate(-45deg) scale(-1);
+  }
+
+  figure img {
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+  }
+
+  #home {
+  	background: #364F6B;
+  	color: #F5F5F5;
+  }
+
+  #about {
+  	background: #FC5185;
+  	color: #F5F5F5;
+  }
+
+  #skills {
+  	background: #3FC1C9;
+  	color: #F5F5F5;
+  }
+
+  #contact {
+  	background: #364F6B;
+  	color: #F5F5F5;
+  }
+
+  .big-heading {
+  	color: #F5F5F5;
+  	font-size: 5rem;
+  	font-family: 'Poppins';
+  	font-weight: bolder;
+  	text-align: right;
+  	width: 95%;
+  }
+
+  .second-big-heading {
+  	font-size: 4rem;
+  	font-family: 'Poppins';
+  }
+
+  p {
+  	font-family: 'Poppins';
+  	line-height: 2;
+  }
+
+  #contact, #home, #about, #skills {
+  	align-items: center;
+  	display: flex;
+  	justify-content: center;
+  }
+
+  .social-icons {
+      color: #F5F5F5;
+      margin: 15px 25px;
+  }
+
+  .social-icons:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: 899px) {
+    figure {
+      width: calc( 100% + 1px);
+    }
+
+    section {
+      width: calc( 100% + 1px);
+    }
+
+    section::before {
+      background: none;
+      content: '';
+      height: 0vmin;
+      left:0;
+      position: none;
+      top: 0%;
+      width: 0vmin;
+      z-index: 0;
+    }
+
+    figure:nth-of-type(1),
+    section:nth-of-type(1) {
+      width: 100%;
+        }
+
+        .home-img, .contact-img, .skill-img {
+          display: none;
+        }
+
+        .big-heading {
+          text-align: left;
+        }
+  }
